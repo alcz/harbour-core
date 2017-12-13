@@ -86,7 +86,12 @@ uint8_t, UCHAR_MAX, etc are defined. */
 
 #include <limits.h>
 #include <stdlib.h>
-#include <stdint.h>
+
+#if defined(_WIN32) && defined(_MSC_VER) && (_MSC_VER < 1600)
+ #include "hbstdint.h"
+#else
+ #include <stdint.h>
+#endif
 
 /* Allow for C++ users compiling this directly. */
 

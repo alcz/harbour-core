@@ -290,7 +290,7 @@ static int     s_iWine     = 0;
 
 #if ! defined( HB_OS_WIN_CE )
 
-#if ( defined( _MSC_VER ) && _MSC_VER < 1400 ) && ! defined( __POCC__ )
+#if ( defined( _MSC_VER ) && _MSC_VER < 1300 ) && ! defined( __POCC__ )
 
    typedef struct _OSVERSIONINFOEXW
    {
